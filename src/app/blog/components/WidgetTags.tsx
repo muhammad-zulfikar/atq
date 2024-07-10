@@ -1,14 +1,14 @@
 import React, { FC } from "react";
 import { TaxonomyType } from "@/data/types";
-import WidgetHeading1 from "./WidgetHeading1";
+import WidgetHeading1 from "./WidgetHeading";
 import Tag from "@/shared/Tag";
-import { DEMO_TAGS } from "@/data/taxonomies";
+import { TAGS } from "@/data/taxonomies";
 
 export interface WidgetTagsProps {
   className?: string;
   tags?: TaxonomyType[];
 }
-const tagsDemo = DEMO_TAGS.filter((_, i) => i > 5);
+const tagsDemo = TAGS.filter((_, i) => i > 5);
 
 const WidgetTags: FC<WidgetTagsProps> = ({
   className = "bg-neutral-100 dark:bg-neutral-800",

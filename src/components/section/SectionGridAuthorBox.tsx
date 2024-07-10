@@ -1,7 +1,7 @@
 import CardAuthorBox from "@/components/CardAuthorBox";
 import CardAuthorBox2 from "@/components/CardAuthorBox2";
 import Heading from "@/shared/Heading";
-import { DEMO_AUTHORS } from "@/data/authors";
+import { AUTHORS } from "@/data/authors";
 import { AuthorType } from "@/data/types";
 import React, { FC } from "react";
 import ButtonPrimary from "@/shared/ButtonPrimary";
@@ -14,7 +14,7 @@ export interface SectionGridAuthorBoxProps {
   gridClassName?: string;
 }
 
-const DEMO_DATA = DEMO_AUTHORS.filter((_, i) => i < 10);
+const DEMO_DATA = AUTHORS.filter((_, i) => i < 10);
 
 const SectionGridAuthorBox: FC<SectionGridAuthorBoxProps> = ({
   className = "",

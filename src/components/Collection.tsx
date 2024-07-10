@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import ButtonPrimary from "@/shared/ButtonPrimary";
 import Link from "next/link";
 import Image from "next/image";
+import { Route } from "next";
 
 export interface CollectionProps {
   className?: string;
@@ -19,7 +20,7 @@ const Collection: FC<CollectionProps> = ({
   color,
 }) => {
   return (
-    <Link href={"/ppdb"} className={`nc-Collection block ${className}`}>
+    <Link href={"/ppdb" as Route} className={`nc-Collection block ${className}`}>
       <div
         className={`relative w-full aspect-w-16 aspect-h-11 sm:aspect-h-10 h-0 rounded-2xl overflow-hidden group ${color}`}
       >
@@ -52,7 +53,7 @@ const Collection: FC<CollectionProps> = ({
                 sizeClass="py-3 px-4 sm:py-3.5 sm:px-6"
                 fontSize="text-sm font-medium"
               >
-                Show more
+                Selengkapnya
               </ButtonPrimary>
             </div>
           </div>

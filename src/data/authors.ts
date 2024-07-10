@@ -45,10 +45,10 @@ const imgs = [
   avatar20,
 ];
 
-const DEMO_AUTHORS: AuthorType[] = __authors.map((item, index) => ({
+const AUTHORS: AuthorType[] = __authors.map((item, index) => ({
   ...item,
   avatar: imgs[index] || item.avatar,
   href: item.href as Route,
 }));
 
-export { DEMO_AUTHORS };
+export { AUTHORS };

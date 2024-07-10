@@ -1,15 +1,15 @@
-import { DEMO_POSTS } from "@/data/posts";
+import { POSTS } from "@/data/posts";
 import { PostDataType } from "@/data/types";
 import React, { FC } from "react";
 import Card3Small from "./Card3Small";
-import WidgetHeading1 from "./WidgetHeading1";
+import WidgetHeading1 from "./WidgetHeading";
 
 export interface WidgetPostsProps {
   className?: string;
   posts?: PostDataType[];
 }
 
-const widgetPostsDemo: PostDataType[] = DEMO_POSTS.filter(
+const widgetPostsDemo: PostDataType[] = POSTS.filter(
   (_, i) => i > 2 && i < 7
 );
 

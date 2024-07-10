@@ -48,7 +48,7 @@ const KEUNGGULAN: KeunggulanItem[] = [
 const VISI = "Menyiapkan generasi Rabbani yang unggul, dengan memadukan IMLAQ, IMTAQ, dan IPTEK, demi menghadapi tantangan global.";
 
 const MISI: VisiMisiItem[] = [
-  { title: "Menjadi SDIT unggulan kebanggan umat Islam di Kota Depok." },
+  { title: "Menjadi SDIT unggulan kebanggaan umat Islam di Kota Depok." },
   { title: "Profesionalisme dalam pengelolaan pendidikan dan dakwah." },
   { title: "Penerapan proses belajar dan pendidikan dengan nilai Islami yang integratif." },
   { title: "Penerapan proses belajar yang aktif, kreatif, efektif, dan menyenangkan." },
@@ -59,15 +59,15 @@ export interface SectionProfileProps {
   className?: string;
 }
 
-const SectionProfile: FC<SectionProfileProps> = ({ className = "" }) => {
+const SectionProfile: FC<SectionProfileProps> = ({ className = "pb-16" }) => {
   const [selectedItem, setSelectedItem] = useState<KeunggulanItem | null>(null);
 
   return (
     <div className={`nc-SectionProfile relative flex flex-col items-center ${className}`} data-nc-id="SectionProfile">
       <div className="w-full">
-        <h2 className="font-semibold text-4xl text-left flex items-center">
+        <h2 className="font-semibold text-3xl md:text-4xl text-left flex items-center">
           Profil Sekolah
-          <a href="/profil" className="ml-2 p-2 bg-neutral-200 dark:bg-neutral-800 rounded-lg hover:bg-neutral-300 dark:hover:bg-neutral-900">
+          <a href="/profil" className="ml-2 p-2 bg-neutral-200 dark:bg-neutral-800 dark:bg-opacity-50 rounded-lg hover:bg-neutral-300 dark:hover:bg-neutral-800">
             <ChevronRightIcon className="h-4 w-4 text-neutral-500 dark:text-neutral-400" />
           </a>
         </h2>
@@ -75,7 +75,7 @@ const SectionProfile: FC<SectionProfileProps> = ({ className = "" }) => {
         <div className="mt-10 space-y-10">
           <div className="space-y-4">
             <span className="block text-xl font-semibold text-left">Tentang</span>
-            <p className="mt-5 text-neutral-500 dark:text-neutral-400 text-left bg-neutral-200 dark:bg-neutral-800 p-6 rounded-lg">
+            <p className="mt-5 text-neutral-500 dark:text-neutral-400 text-left bg-neutral-200 dark:bg-neutral-800 dark:bg-opacity-50 p-6 rounded-lg">
               {TENTANG}
             </p>
           </div>
@@ -86,7 +86,7 @@ const SectionProfile: FC<SectionProfileProps> = ({ className = "" }) => {
               {KEUNGGULAN.map((item) => (
                 <div
                   key={item.id}
-                  className="flex items-center justify-center flex-col p-4 cursor-pointer bg-neutral-200 dark:bg-neutral-800 hover:bg-neutral-300 dark:hover:bg-neutral-900 rounded-lg"
+                  className="flex items-center justify-center flex-col p-4 cursor-pointer bg-neutral-200 dark:bg-neutral-800 dark:bg-opacity-50 dark:hover:bg-neutral-800 hover:bg-neutral-300 rounded-lg"
                   onClick={() => setSelectedItem(item)}
                 >
                   <item.icon className="w-5 h-5 lg:w-7 lg:h-7 text-neutral-900 dark:text-neutral-200" />
@@ -99,11 +99,11 @@ const SectionProfile: FC<SectionProfileProps> = ({ className = "" }) => {
           <div className="space-y-4">
             <span className="block text-xl font-semibold text-left">Visi & Misi</span>
             <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-4 text-neutral-500 dark:text-neutral-400">
-              <div className="bg-neutral-200 dark:bg-neutral-800 p-6 rounded-lg">
+              <div className="bg-neutral-200 dark:bg-neutral-800 dark:bg-opacity-50 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold mb-4">Visi</h3>
                 <p>{VISI}</p>
               </div>
-              <div className="bg-neutral-200 dark:bg-neutral-800 p-6 rounded-lg">
+              <div className="bg-neutral-200 dark:bg-neutral-800 dark:bg-opacity-50 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold mb-4">Misi</h3>
                 <ul className="list-disc list-inside">
                   {MISI.map((item, index) => (

@@ -164,9 +164,9 @@ const SectionFacility: FC<SectionFacilityProps> = ({
 
   return (
     <div className={`nc-SectionSliderNewCategories ${className}`}>
-      <h2 className="font-semibold text-4xl text-left flex items-center mb-10 space-y-10">
+      <h2 className="font-semibold text-3xl md:text-4xl text-left flex items-center mb-10 space-y-10">
         Fasilitas Sekolah
-        <a href="/fasilitas" className="ml-2 p-2 bg-neutral-200 dark:bg-neutral-800 rounded-lg hover:bg-neutral-300 dark:hover:bg-neutral-900">
+        <a href="/fasilitas" className="ml-2 p-2 bg-neutral-200 dark:bg-neutral-800 dark:bg-neutral-800 dark:bg-opacity-50 rounded-lg hover:bg-neutral-300 dark:hover:bg-neutral-800">
           <ChevronRightIcon className="h-4 w-4 text-neutral-500 dark:text-neutral-400" />
         </a>
       </h2>

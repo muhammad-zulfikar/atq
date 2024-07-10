@@ -10,7 +10,7 @@ export const NAVIGATION_MOBILE: NavItemType[] = [
   },
   {
     id: ncNanoId(),
-    href: "/ppdb",
+    href: "/ppdb" as Route,
     name: "PPDB",
   },
   {
@@ -44,26 +44,12 @@ export const NAVIGATION_DESKTOP: NavItemType[] = [
   {
     id: ncNanoId(),
     href: "/",
-    name: "Home",
+    name: "Tentang",
     children: [
       {
         id: ncNanoId(),
         href: "/",
-        name: "Beranda",
-      },
-    ],
-  },
-
-  //
-  {
-    id: ncNanoId(),
-    href: "/",
-    name: "About Us",
-    children: [
-      {
-        id: ncNanoId(),
-        href: "/",
-        name: "Profil"
+        name: "Profil",
       },
       {
         id: ncNanoId(),
@@ -73,9 +59,8 @@ export const NAVIGATION_DESKTOP: NavItemType[] = [
       {
         id: ncNanoId(),
         href: "/",
-        name: "Keunggulan"
+        name: "Keunggulan",
       },
-
       {
         id: ncNanoId(),
         href: "/",
@@ -92,29 +77,34 @@ export const NAVIGATION_DESKTOP: NavItemType[] = [
   //
   {
     id: ncNanoId(),
-    href: "/author",
-    name: "Templates",
-    type: "dropdown",
+    href: "/",
+    name: "Telusuri",
     children: [
       {
         id: ncNanoId(),
         href: "/",
-        name: "Fasilitas"
+        name: "Guru"
+      },
+      {
+        id: ncNanoId(),
+        href: "/",
+        name: "Fasilitas",
       },
       {
         id: ncNanoId(),
         href: "/",
         name: "Ekstrakurikuler"
       },
+
       {
         id: ncNanoId(),
         href: "/",
-        name: "Guru & Karyawan"
+        name: "Galeri",
       },
       {
         id: ncNanoId(),
         href: "/",
-        name: "Kalender Akademik"
+        name: "Prestasi",
       },
     ],
   },
@@ -128,18 +118,28 @@ export const NAVIGATION_DESKTOP: NavItemType[] = [
     children: [
       {
         id: ncNanoId(),
-        href: "/blog",
-        name: "Artikel"
+        href: "/ppdb",
+        name: "Penerimaan Peserta Didik Baru (PPDB)"
       },
       {
         id: ncNanoId(),
         href: "/blog/single" as Route,
-        name: "PPDB"
+        name: "Artikel & Berita"
       },
       {
         id: ncNanoId(),
         href: "/contact" as Route,
         name: "Kontak"
+      },
+      {
+        id: ncNanoId(),
+        href: "/contact" as Route,
+        name: "FAQ"
+      },
+      {
+        id: ncNanoId(),
+        href: "/contact" as Route,
+        name: "Pengumuman"
       },
     ],
   },

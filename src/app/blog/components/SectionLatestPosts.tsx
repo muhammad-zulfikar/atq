@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import Heading from "@/shared/Heading";
-import { DEMO_POSTS } from "@/data/posts";
+import { POSTS } from "@/data/posts";
 import { PostDataType } from "@/data/types";
 import Pagination from "@/shared/Pagination";
 import ButtonPrimary from "@/shared/ButtonPrimary";
@@ -11,7 +11,7 @@ import Card3 from "./Card3";
 
 // THIS IS DEMO FOR MAIN DEMO
 // OTHER DEMO WILL PASS PROPS
-const postsDemo: PostDataType[] = DEMO_POSTS.filter((_, i) => i > 7 && i < 14);
+const postsDemo: PostDataType[] = POSTS.filter((_, i) => i > 7 && i < 14);
 //
 export interface SectionLatestPostsProps {
   posts?: PostDataType[];

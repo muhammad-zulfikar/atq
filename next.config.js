@@ -43,8 +43,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/atq',
-  assetPrefix: '/atq',
 };
 
 module.exports = nextConfig;

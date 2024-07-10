@@ -1,24 +1,27 @@
 "use client";
 
-import React, { FC, Fragment, useState } from "react";
-import { ArrowRightIcon, Squares2X2Icon } from "@heroicons/react/24/outline";
+import React, { FC } from "react";
+import { Squares2X2Icon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
-import { Amenities_demos, PHOTOS } from "../constant";
-import Heading from "@/shared/Heading";
-import { Route } from "next";
+import { PHOTOS } from "../../app/galeri/constant";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
-export interface ListingStayDetailPageProps { }
+export interface SectionGalleryProps { }
 
-const ListingStayDetailPage: FC<{ onOpenModal: () => void }> = ({ onOpenModal }) => {
+const SectionGallery: FC<{ onOpenModal: () => void }> = ({ onOpenModal }) => {
   const handleOpenModalImageGallery = () => {
     onOpenModal();
   };
 
   return (
     <div className="nc-ListingStayDetailPage">
-      <Heading>Galeri</Heading>
-      <header className="rounded-md sm:rounded-xl">
+      <h2 className="font-semibold text-3xl md:text-4xl text-left flex items-center">
+        Galeri
+        <a href="/galeri" className="ml-2 p-2 bg-neutral-200 dark:bg-neutral-800 dark:bg-opacity-50 rounded-lg hover:bg-neutral-300 dark:hover:bg-neutral-800">
+          <ChevronRightIcon className="h-4 w-4 text-neutral-500 dark:text-neutral-400" />
+        </a>
+      </h2>
+      <header className="rounded-md sm:rounded-xl mt-10">
         <div className="relative grid grid-cols-3 sm:grid-cols-4 gap-1 sm:gap-2">
           <div
             className="col-span-2 row-span-3 sm:row-span-2 relative rounded-md sm:rounded-xl overflow-hidden cursor-pointer"
@@ -53,18 +56,11 @@ const ListingStayDetailPage: FC<{ onOpenModal: () => void }> = ({ onOpenModal })
               />
             </div>
           ))}
-          <button
-            className="absolute hidden md:flex md:items-center md:justify-center left-3 bottom-3 px-4 py-2 rounded-xl bg-neutral-100 text-neutral-500 hover:bg-neutral-200 z-10"
-            onClick={handleOpenModalImageGallery}
-          >
-            <Squares2X2Icon className="w-5 h-5" />
-            <span className="ml-2 text-neutral-800 text-sm font-medium">Show all photos</span>
-          </button>
         </div>
       </header>
     </div>
   );
 };
 
-export default ListingStayDetailPage;
+export default SectionGallery;
 

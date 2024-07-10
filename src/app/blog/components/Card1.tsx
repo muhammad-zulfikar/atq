@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { PostDataType } from "@/data/types";
 import PostCardMeta from "@/components/PostCardMeta";
 import PostTypeFeaturedIcon from "@/components/PostTypeFeaturedIcon";
-import { DEMO_POSTS } from "@/data/posts";
+import { POSTS } from "@/data/posts";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -13,7 +13,7 @@ export interface Card1Props {
 
 const Card1: FC<Card1Props> = ({
   className = "h-full",
-  post = DEMO_POSTS[0],
+  post = POSTS[0],
 }) => {
   const { title, href, featuredImage, desc, postType } = post;
 

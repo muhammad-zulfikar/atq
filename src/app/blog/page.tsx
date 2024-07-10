@@ -1,10 +1,9 @@
 import React from "react";
-import { DEMO_POSTS } from "@/data/posts";
+import { POSTS } from "@/data/posts";
 import SectionMagazine from "./components/SectionMagazine";
 import SectionLatestPosts from "./components/SectionLatestPosts";
 import BgGlassmorphism from "@/components/BgGlassmorphism";
 
-const POSTS = DEMO_POSTS;
 const MAGAZINE_POSTS = POSTS.filter((_, i) => i >= 0 && i < 8);
 const BlogPage: React.FC = () => {
   return (

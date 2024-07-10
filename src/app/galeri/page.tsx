@@ -1,7 +1,6 @@
 "use client";
 
 import React, { FC } from "react";
-import { Squares2X2Icon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { PHOTOS } from "./constant";
@@ -60,16 +59,6 @@ const GaleriPage: FC<GaleriProps> = ({}) => {
               />
             </div>
           ))}
-
-          <button
-            className="absolute hidden md:flex md:items-center md:justify-center left-3 bottom-3 px-4 py-2 rounded-xl bg-neutral-100 text-neutral-500 hover:bg-neutral-200 z-10"
-            onClick={handleOpenModalImageGallery}
-          >
-            <Squares2X2Icon className="w-5 h-5" />
-            <span className="ml-2 text-neutral-800 text-sm font-medium">
-              Show all photos
-            </span>
-          </button>
         </div>
       </header>
     </div>

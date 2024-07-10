@@ -2,15 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/* Scrollbar Styling */
 ::-webkit-scrollbar {
-    width: 15px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: #15803D;
-    border-radius: 6px;
-    outline: rgb(219, 219, 219);
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  }
+    width: 30px;
+    display: block;
+    position: relative;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 15px;
+    width: 20px;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: silver;
+    border-radius: 15px;
+    display: block;
+    position: relative;
+    border: 10px solid transparent;
+    z-index: -1;
+    background-size: 100% 100%, 100% 100%, 15px 50%, 15px 50%;
+    background-clip: padding-box;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 15px;
+    display: block;
+    position: relative;
+    border: 10px solid transparent;
+    z-index: -1;
+    background-size: 100% 100%, 100% 100%, 15px 50%, 15px 50%;
+    background-clip: padding-box;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .2) inset;
+}

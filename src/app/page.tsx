@@ -1,18 +1,23 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+
 import BackgroundSection from "@/components/BackgroundSection";
 import BgGlassmorphism from "@/components/BgGlassmorphism";
+
 import SectionHero from "@/components/section/SectionHero";
 import SectionProfile from "@/components/section/SectionProfile";
 import SectionFacility from "@/components/section/SectionFacility";
 import SectionExtracurricular from "@/components/section/SectionExtracurricular";
-import BlogPage from "./blog/ForHomePage";
+import SectionBlog from "../components/section/SectionBlog";
+
+import SectionGallery from "../components/section/SectionGallery";
 import ImageGallery from "@/components/image-gallery/ImageGallery";
-import SectionGallery from "./galeri/ForHomePage"; 
 import { imageGallery } from "./galeri/constant";
-import PageContact from "./contact/page";
+
+import SectionContact from "@/components/section/SectionContact";
+import SectionAddress from "@/components/section/SectionAddress";
 
 import { Route } from "next";
 
@@ -34,33 +39,27 @@ function PageHome() {
 
   return (
     <main className="nc-PageHome relative overflow-hidden">
-      {/* GLASSMORPHISM */}
       <BgGlassmorphism />
 
       <div className="container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28">
-        {/* SECTION HERO */}
         <SectionHero className="pt-10 lg:pt-16" />
 
-        {/* SECTION PROFILE */}
-        <div className="relative py-16">
+        <div className="relative pt-16">
           <BackgroundSection />
           <SectionProfile />
         </div>
 
-        {/* SECTION FACILITY */}
         <SectionFacility categoryCardType="card5" />
 
-        {/* SECTION EXTRACURRICULAR */}
         <SectionExtracurricular />
 
-        {/* SECTION BLOG */}
-        <BlogPage />
-
-        {/* SECTION GALLERY */}
         <SectionGallery onOpenModal={handleOpenModalImageGallery} />
+        
+        <SectionBlog />
 
-        {/* SECTION CONTACT */}
-        <PageContact />
+        <SectionContact />
+
+        <SectionAddress />
       </div>
 
       <ImageGallery

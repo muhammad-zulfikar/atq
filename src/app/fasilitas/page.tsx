@@ -114,16 +114,6 @@ const FacilityPage: FC<FacilityPageProps> = ({}) => {
               />
             </div>
           ))}
-
-          <button
-            className="absolute hidden md:flex md:items-center md:justify-center left-3 bottom-3 px-4 py-2 rounded-xl bg-neutral-100 text-neutral-500 hover:bg-neutral-200 z-10"
-            onClick={handleOpenModalImageGallery}
-          >
-            <Squares2X2Icon className="w-5 h-5" />
-            <span className="ml-2 text-neutral-800 text-sm font-medium">
-              Show all photos
-            </span>
-          </button>
         </div>
       </header>
 

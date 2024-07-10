@@ -88,9 +88,9 @@ const SectionExtracurricular: React.FC<SectionExtracurricularProps> = ({
 
   return (
     <div className={`nc-SectionGridCategoryBox relative ${className}`}>
-      <h2 className="font-semibold text-4xl text-left flex items-center">
+      <h2 className="font-semibold text-3xl md:text-4xl text-left flex items-center">
         Ekstrakurikuler
-        <a href="/ekstrakurikuler" className="ml-2 p-2 bg-neutral-200 dark:bg-neutral-800 rounded-lg hover:bg-neutral-300 dark:hover:bg-neutral-900">
+        <a href="/ekstrakurikuler" className="ml-2 p-2 bg-neutral-200 dark:bg-neutral-800 dark:bg-opacity-50 rounded-lg hover:bg-neutral-300 dark:hover:bg-neutral-800">
           <ChevronRightIcon className="h-4 w-4 text-neutral-500 dark:text-neutral-400" />
         </a>
       </h2>
@@ -101,7 +101,7 @@ const SectionExtracurricular: React.FC<SectionExtracurricularProps> = ({
           ))}
         </div>
         <div className="flex flex-col lg:pb-14 mt-12 md:mt-20 space-y-5 sm:space-y-0 sm:space-x-3 sm:flex-row justify-center items-center">
-          <ButtonPrimary href="/blog">Show me more</ButtonPrimary>
+          <ButtonPrimary href="/ekstrakurikuler">Lihat Selengkapnya</ButtonPrimary>
         </div>
       </div>
       <div className="hidden sm:block mt-10 space-y-10">

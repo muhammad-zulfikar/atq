@@ -3,7 +3,6 @@
 import ImageGallery from "@/components/image-gallery/ImageGallery";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import React, { ReactNode } from "react";
-import MobileFooterSticky from "./(components)/MobileFooterSticky";
 import { imageGallery } from "./constant";
 import { Route } from "next";
 
@@ -36,9 +35,6 @@ const DetailtLayout = ({ children }: { children: ReactNode }) => {
       />
 
       <div className="container ListingDetailPage__content mb-12 lg:mb-24">{children}</div>
-
-      {/* STICKY FOOTER MOBILE */}
-      <MobileFooterSticky />
     </div>
   );
 };

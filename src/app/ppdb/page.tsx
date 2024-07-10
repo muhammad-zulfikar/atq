@@ -1,5 +1,5 @@
 import React from "react";
-import { DEMO_POSTS } from "@/data/posts";
+import { POSTS } from "@/data/posts";
 import { PostDataType } from "@/data/types";
 import Avatar from "@/shared/Avatar";
 import Badge from "@/shared/Badge";
@@ -37,17 +37,13 @@ const Page = ({}) => {
               />
               <div className="ml-3">
                 <div className="flex items-center">
-                  <a className="block font-semibold" href="/">
+                  <p className="block font-semibold">
                     Admin PPDB
-                  </a>
+                  </p>
                 </div>
                 <div className="text-xs mt-[6px]">
                   <span className="text-neutral-700 dark:text-neutral-300">
                     1 Juli 2024
-                  </span>
-                  <span className="mx-2 font-semibold">·</span>
-                  <span className="text-neutral-700 dark:text-neutral-300">
-                    5 min read
                   </span>
                 </div>
               </div>
@@ -149,13 +145,10 @@ const Page = ({}) => {
   };
 
   return (
-    <div className="nc-PageSingle pt-8 lg:pt-16 ">
+    <div className="nc-PageSingle pt-8 lg:pt-16">
       {renderHeader()}
-      <div className="container my-10 sm:my-12 ">
-        <Image className="w-full rounded-xl" src={travelhero2Image} alt="" />
-      </div>
 
-      <div className="nc-SingleContent container space-y-10">
+      <div className="nc-SingleContent container space-y-10 my-10 sm:my-12">
         {renderContent()}
         <PageContact />
         <div className="max-w-screen-md mx-auto border-b border-t border-neutral-100 dark:border-neutral-700"></div>
@@ -165,7 +158,7 @@ const Page = ({}) => {
           <h2 className="text-3xl font-semibold">Informasi Terkait</h2>
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
             {/*  */}
-            {DEMO_POSTS.filter((_, i) => i < 4).map(renderPostRelated)}
+            {POSTS.filter((_, i) => i < 4).map(renderPostRelated)}
             {/*  */}
           </div>
         </div>

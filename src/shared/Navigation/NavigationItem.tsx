@@ -282,6 +282,5 @@ const NavigationItem: FC<NavigationItemWithRouterProps> = ({ menuItem }) => {
       );
   }
 };
-// Your component own properties
 
 export default NavigationItem;

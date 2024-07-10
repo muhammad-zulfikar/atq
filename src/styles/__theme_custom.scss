@@ -13,8 +13,10 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .hiddenScrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .z-max {
@@ -25,9 +27,11 @@
 .nc-will-change-transform {
   will-change: transform;
 }
+
 .nc-will-change-top {
   will-change: top;
 }
+
 //
 .nc-GallerySlider .glide__bullet--active {
   @apply bg-white w-2 h-2;
@@ -35,13 +39,13 @@
 
 //
 .nc-card-title {
-  @apply transition-colors hover:text-green-900 dark:hover:text-green-500 duration-75;
+  @apply transition-colors hover:text-neutral-900/60 dark:hover:text-neutral-500 duration-75;
 }
 
 //
 .nc-PostCardCommentBtn,
 .nc-PostCardLikeAction,
-.nc-CommentCardLikeReply > button {
+.nc-CommentCardLikeReply>button {
   &:hover {
     span {
       color: inherit;
@@ -51,7 +55,7 @@
 
 //
 .nc-box-has-hover {
-  @apply bg-white rounded-3xl border-2 border-neutral-300 hover:bg-neutral-50 hover:shadow-lg hover:border-transparent transition-shadow;
+  @apply bg-white rounded-3xl border-2 border-neutral-300 hover:border-neutral-400 hover:shadow-lg transition-shadow;
 }
 
 .nc-dark-box-bg-has-hover {
@@ -59,13 +63,14 @@
 }
 
 .nc-dark-box-bg {
-  @apply dark:bg-neutral-800 dark:bg-opacity-30  dark:border dark:border-neutral-700 dark:shadow-2xl;
+  @apply dark:bg-neutral-800 dark:bg-opacity-30 dark:border dark:border-neutral-700 dark:shadow-2xl;
 }
 
 //
 .nc-origin-100 {
   transform-origin: 100% 50% 0px;
 }
+
 .nc-origin-50 {
   transform-origin: 50% 50% 0px;
 }
@@ -89,10 +94,12 @@
   .nc-hero-field-focused {
     @apply rounded-3xl shadow-2xl;
   }
+
   &.nc-ListingExperiencesDetailPage {
     .ExperiencesDateSingleInput .nc-hero-field-focused {
       @apply rounded-r-none;
     }
+
     .listingExperiencesDetailPage__GuestsInput .nc-hero-field-focused {
       @apply rounded-l-none;
     }
@@ -101,6 +108,7 @@
   .DateRangePickerInput_clearDates,
   .SingleDatePickerInput_clearDate {
     @apply rounded-full bg-neutral-200/90 dark:bg-white/10;
+
     svg {
       @apply w-2 fill-neutral-700 dark:fill-neutral-300;
     }
@@ -112,6 +120,7 @@
     @apply rounded-t-none;
   }
 }
+
 .nc-ListingStayDetailPage__stayDatesRangeInput {
   .nc-hero-field-focused {
     @apply rounded-b-none;
@@ -131,6 +140,7 @@
 .nc-flex-1\.5 {
   flex: 1.5 0 0%;
 }
+
 .nc-flex-1\.5-auto {
   flex: 1.5 0 auto;
 }
@@ -151,6 +161,7 @@
   .lg\:nc-flex-1\.5 {
     flex: 1.5 0 0%;
   }
+
   .lg\:nc-flex-1\.5-auto {
     flex: 1.5 0 auto;
   }
@@ -171,9 +182,11 @@
 .nc-icon-field {
   @apply w-5 h-5 lg:w-7 lg:h-7;
 }
+
 .nc-icon-field-2 {
   @apply w-5 h-5 lg:w-8 lg:h-8;
 }
+
 //
 button.gm-control-active.gm-fullscreen-control {
   @apply rounded-xl #{!important};
@@ -181,7 +194,7 @@ button.gm-control-active.gm-fullscreen-control {
 
 //
 .nc-FiveStartIconForRate {
-  svg:hover ~ svg {
+  svg:hover~svg {
     @apply text-neutral-300;
   }
 }
@@ -209,6 +222,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .rc-slider-track {
   @apply bg-primary-400;
 }
+
 .rc-slider-handle {
   @apply border-primary-300;
 }
@@ -236,7 +250,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .menuIsNew_lv1 {
-  > a::before {
+  >a::before {
     content: "New!";
     position: absolute;
     top: -2px;
@@ -251,8 +265,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     font-weight: normal;
   }
 }
+
 .menuIsNew {
-  > a::after {
+  >a::after {
     content: "New!";
     display: inline-block;
     padding: 0 5px;
@@ -273,6 +288,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }

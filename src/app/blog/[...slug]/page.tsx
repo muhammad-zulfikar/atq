@@ -1,5 +1,5 @@
 import React from "react";
-import { DEMO_POSTS } from "@/data/posts";
+import { POSTS } from "@/data/posts";
 import { PostDataType } from "@/data/types";
 import Avatar from "@/shared/Avatar";
 import Badge from "@/shared/Badge";
@@ -203,7 +203,7 @@ const Page = ({}: {
           <h2 className="text-3xl font-semibold">Related posts</h2>
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
             {/*  */}
-            {DEMO_POSTS.filter((_, i) => i < 4).map(renderPostRelated)}
+            {POSTS.filter((_, i) => i < 4).map(renderPostRelated)}
             {/*  */}
           </div>
         </div>
