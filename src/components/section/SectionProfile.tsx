@@ -1,14 +1,14 @@
-"use client";
-
 import React, { FC, useState } from "react";
 import { TrophyIcon, AcademicCapIcon, BuildingLibraryIcon, UserGroupIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import { Dialog } from "@headlessui/react";
 
+type IconType = typeof TrophyIcon | typeof AcademicCapIcon | typeof BuildingLibraryIcon | typeof UserGroupIcon;
+
 export interface KeunggulanItem {
   id: string;
   desc: string;
-  icon: React.ElementType;
+  icon: IconType;
   detailedDesc: string;
 }
 
@@ -62,6 +62,10 @@ export interface SectionProfileProps {
 const SectionProfile: FC<SectionProfileProps> = ({ className = "pb-16" }) => {
   const [selectedItem, setSelectedItem] = useState<KeunggulanItem | null>(null);
 
+  const renderIcon = (IconComponent: IconType, className: string) => {
+    return <IconComponent className={className} />;
+  };
+
   return (
     <div className={`nc-SectionProfile relative flex flex-col items-center ${className}`} data-nc-id="SectionProfile">
       <div className="w-full">
@@ -89,7 +93,7 @@ const SectionProfile: FC<SectionProfileProps> = ({ className = "pb-16" }) => {
                   className="flex items-center justify-center flex-col p-4 cursor-pointer bg-neutral-200 dark:bg-neutral-800 dark:bg-opacity-50 dark:hover:bg-neutral-800 hover:bg-neutral-300 rounded-lg"
                   onClick={() => setSelectedItem(item)}
                 >
-                  <item.icon className="w-5 h-5 lg:w-7 lg:h-7 text-neutral-900 dark:text-neutral-200" />
+                  {renderIcon(item.icon, "w-5 h-5 lg:w-7 lg:h-7 text-neutral-900 dark:text-neutral-200")}
                   <p className="mt-2 text-center lg:text-left">{item.desc}</p>
                 </div>
               ))}
@@ -134,7 +138,7 @@ const SectionProfile: FC<SectionProfileProps> = ({ className = "pb-16" }) => {
 
             {selectedItem && (
               <>
-                <selectedItem.icon className="h-12 w-12 text-neutral-900 dark:text-neutral-200 mx-auto" />
+                {renderIcon(selectedItem.icon, "h-12 w-12 text-neutral-900 dark:text-neutral-200 mx-auto")}
                 <div className="mt-4 text-center">
                   <h3 className="text-lg font-medium text-neutral-900 dark:text-neutral-200">
                     {selectedItem.desc}

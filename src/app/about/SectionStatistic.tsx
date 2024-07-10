@@ -5,10 +5,12 @@ import Heading from "@/shared/Heading";
 import { TrophyIcon, AcademicCapIcon, BuildingLibraryIcon, UserGroupIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Dialog } from "@headlessui/react";
 
+type IconType = typeof TrophyIcon | typeof AcademicCapIcon | typeof BuildingLibraryIcon | typeof UserGroupIcon;
+
 export interface Statistic {
   id: string;
   desc: string;
-  icon: React.ElementType;
+  icon: IconType;
 }
 
 const PROFILE: Statistic[] = [
