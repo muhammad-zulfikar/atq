@@ -15,20 +15,20 @@ export interface WidgetFooterMenu {
 const widgetMenus: WidgetFooterMenu[] = [
   {
     id: "5",
-    title: "Tentang Kami",
+    title: "Tentang",
     menus: [
-      { href: "#", label: "Profil" },
-      { href: "#", label: "Sejarah" },
-      { href: "#", label: "Keunggulan" },
-      { href: "#", label: "Visi & Misi" },
-      { href: "#", label: "Statistik" },
+      { href: "/profil", label: "Profil" },
+      { href: "/profil#sejarah", label: "Sejarah" },
+      { href: "/profil#keunggulan", label: "Keunggulan" },
+      { href: "/profil#visimisi", label: "Visi & Misi" },
+      { href: "/profil#statistik", label: "Statistik" },
     ],
   },
   {
     id: "1",
     title: "Telusuri",
     menus: [
-      { href: "#", label: "Guru" },
+      { href: "/guru", label: "Guru" },
       { href: "#", label: "Fasilitas" },
       { href: "#", label: "Ekstrakurikuler" },
       { href: "#", label: "Galeri" },

@@ -1,5 +1,4 @@
 import __taxonomies from "./jsons/__taxonomies.json";
-import __stayTaxonomies from "./jsons/__stayTaxonomies.json";
 import { TaxonomyType } from "./types";
 import { Route } from "@/routers/types";
 

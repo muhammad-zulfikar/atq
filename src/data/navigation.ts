@@ -43,33 +43,33 @@ export const NAVIGATION_MOBILE: NavItemType[] = [
 export const NAVIGATION_DESKTOP: NavItemType[] = [
   {
     id: ncNanoId(),
-    href: "/",
+    href: "/profil",
     name: "Tentang",
     children: [
       {
         id: ncNanoId(),
-        href: "/",
+        href: "/profil",
         name: "Profil",
       },
       {
         id: ncNanoId(),
-        href: "/",
+        href: "/profil",
         name: "Sejarah",
       },
       {
         id: ncNanoId(),
-        href: "/",
+        href: "/profil",
         name: "Keunggulan",
       },
       {
         id: ncNanoId(),
-        href: "/",
+        href: "/profil",
         name: "Visi & Misi",
       },
       {
         id: ncNanoId(),
-        href: "/",
-        name: "Akreditasi",
+        href: "/profil",
+        name: "Statistik",
       },
     ],
   },
@@ -82,7 +82,7 @@ export const NAVIGATION_DESKTOP: NavItemType[] = [
     children: [
       {
         id: ncNanoId(),
-        href: "/",
+        href: "/guru",
         name: "Guru"
       },
       {

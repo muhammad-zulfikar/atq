@@ -21,7 +21,7 @@ export interface TaxonomyType {
   listingType?: "stay" | "experiences" | "car";
 }
 
-export interface AuthorType {
+export interface TeacherType {
   id: string | number;
   firstName: string;
   lastName: string;
@@ -29,16 +29,15 @@ export interface AuthorType {
   avatar: string | StaticImageData;
   bgImage?: string | StaticImageData;
   email?: string;
-  count: number;
+  gender: string;
   desc: string;
   jobName: string;
   href: Route<string>;
-  starRating?: number;
 }
 
 export interface PostDataType {
   id: string | number;
-  author: AuthorType;
+  author: TeacherType;
   date: string;
   href: Route<string>;
   categories: TaxonomyType[];
@@ -62,82 +61,3 @@ export type TwMainColor =
   | "gray";
 
 //
-export interface StayDataType {
-  id: string | number;
-  author: AuthorType;
-  date: string;
-  href: Route<string>;
-  title: string;
-  featuredImage: StaticImageData | string;
-  commentCount: number;
-  viewCount: number;
-  address: string;
-  reviewStart: number;
-  reviewCount: number;
-  like: boolean;
-  galleryImgs: (StaticImageData | string)[];
-  price: string;
-  listingCategory: TaxonomyType;
-  maxGuests: number;
-  bedrooms: number;
-  bathrooms: number;
-  saleOff?: string | null;
-  isAds: boolean | null;
-  map: {
-    lat: number;
-    lng: number;
-  };
-}
-
-//
-export interface ExperiencesDataType {
-  id: string | number;
-  author: AuthorType;
-  date: string;
-  href: Route<string>;
-  title: string;
-  featuredImage: StaticImageData | string;
-  commentCount: number;
-  viewCount: number;
-  address: string;
-  reviewStart: number;
-  reviewCount: number;
-  like: boolean;
-  galleryImgs: (StaticImageData | string)[];
-  price: string;
-  listingCategory: TaxonomyType;
-  maxGuests: number;
-  saleOff?: string | null;
-  isAds: boolean | null;
-  map: {
-    lat: number;
-    lng: number;
-  };
-}
-
-//
-export interface CarDataType {
-  id: string | number;
-  author: AuthorType;
-  date: string;
-  href: Route<string>;
-  title: string;
-  featuredImage: StaticImageData | string;
-  commentCount: number;
-  viewCount: number;
-  address: string;
-  reviewStart: number;
-  reviewCount: number;
-  like: boolean;
-  galleryImgs: (StaticImageData | string)[];
-  price: string;
-  listingCategory: TaxonomyType;
-  seats: number;
-  gearshift: string;
-  saleOff?: string | null;
-  isAds: boolean | null;
-  map: {
-    lat: number;
-    lng: number;
-  };
-}

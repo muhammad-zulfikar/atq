@@ -101,7 +101,7 @@ const SectionExtracurricular: React.FC<SectionExtracurricularProps> = ({
           ))}
         </div>
         <div className="flex flex-col lg:pb-14 mt-12 md:mt-20 space-y-5 sm:space-y-0 sm:space-x-3 sm:flex-row justify-center items-center">
-          <ButtonPrimary href="/ekstrakurikuler">Lihat Selengkapnya</ButtonPrimary>
+          <ButtonPrimary href="/ekstrakurikuler/futsal">Lihat Selengkapnya</ButtonPrimary>
         </div>
       </div>
       <div className="hidden sm:block mt-10 space-y-10">

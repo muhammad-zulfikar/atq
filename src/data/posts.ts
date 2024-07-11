@@ -1,7 +1,7 @@
 import __posts from "./jsons/__posts.json";
 import { CATEGORIES } from "./taxonomies";
 import { PostDataType } from "./types";
-import { AUTHORS } from "./authors";
+import { TEACHERS } from "./teachers";
 
 const POSTS = __posts.map((post): PostDataType => {
   const categories = post.categoriesId.map(
@@ -10,7 +10,7 @@ const POSTS = __posts.map((post): PostDataType => {
 
   return {
     ...post,
-    author: AUTHORS.filter((user) => user.id === post.authorId)[0],
+    author: TEACHERS.filter((user) => user.id === post.authorId)[0],
     categories: [categories[0]],
   } as PostDataType;
 });
