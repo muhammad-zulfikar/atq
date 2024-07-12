@@ -4,7 +4,6 @@ import Logo from "@/shared/Logo";
 import SocialsList1 from "@/shared/SocialsList1";
 import { CustomLink } from "@/data/types";
 import React from "react";
-import FooterNav from "./FooterNav";
 
 export interface WidgetFooterMenu {
   id: string;
@@ -29,9 +28,9 @@ const widgetMenus: WidgetFooterMenu[] = [
     title: "Telusuri",
     menus: [
       { href: "/guru", label: "Guru" },
-      { href: "#", label: "Fasilitas" },
-      { href: "#", label: "Ekstrakurikuler" },
-      { href: "#", label: "Galeri" },
+      { href: "/fasilitas", label: "Fasilitas" },
+      { href: "/ekstrakurikuler", label: "Ekstrakurikuler" },
+      { href: "/galeri", label: "Galeri" },
       { href: "#", label: "Prestasi" },
     ],
   },
@@ -39,10 +38,10 @@ const widgetMenus: WidgetFooterMenu[] = [
     id: "2",
     title: "Informasi",
     menus: [
-      { href: "#", label: "Penerimaan Peserta Didik Baru (PPDB)" },
-      { href: "#", label: "Artikel & Berita" },
+      { href: "/ppdb", label: "Penerimaan Peserta Didik Baru (PPDB)" },
+      { href: "/blog", label: "Artikel & Berita" },
       { href: "#", label: "FAQ" },
-      { href: "#", label: "Kontak" },
+      { href: "/kontak", label: "Kontak" },
       { href: "#", label: "Pengumuman" },
     ],
   },

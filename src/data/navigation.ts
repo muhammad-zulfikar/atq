@@ -20,7 +20,7 @@ export const NAVIGATION_MOBILE: NavItemType[] = [
   },
   {
     id: ncNanoId(),
-    href: "/ekstrakurikuler/futsal",
+    href: "/ekstrakurikuler",
     name: "Ekstrakurikuler"
   },
   {
@@ -35,7 +35,7 @@ export const NAVIGATION_MOBILE: NavItemType[] = [
   },
   {
     id: ncNanoId(),
-    href: "/contact" as Route,
+    href: "/kontak" as Route,
     name: "Kontak"
   },
 ];
@@ -87,18 +87,18 @@ export const NAVIGATION_DESKTOP: NavItemType[] = [
       },
       {
         id: ncNanoId(),
-        href: "/",
+        href: "/fasilitas",
         name: "Fasilitas",
       },
       {
         id: ncNanoId(),
-        href: "/",
+        href: "/ekstrakurikuler",
         name: "Ekstrakurikuler"
       },
 
       {
         id: ncNanoId(),
-        href: "/",
+        href: "/galeri",
         name: "Galeri",
       },
       {
@@ -123,22 +123,22 @@ export const NAVIGATION_DESKTOP: NavItemType[] = [
       },
       {
         id: ncNanoId(),
-        href: "/blog/single" as Route,
+        href: "/blog",
         name: "Artikel & Berita"
       },
       {
         id: ncNanoId(),
-        href: "/contact" as Route,
+        href: "/kontak",
         name: "Kontak"
       },
       {
         id: ncNanoId(),
-        href: "/contact" as Route,
+        href: "/kontak",
         name: "FAQ"
       },
       {
         id: ncNanoId(),
-        href: "/contact" as Route,
+        href: "/kontak",
         name: "Pengumuman"
       },
     ],

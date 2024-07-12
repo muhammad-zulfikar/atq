@@ -1,0 +1,25 @@
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.card {
+    border-radius: 1rem; /* Adjust the value as needed */
+    overflow: hidden;
+  }
+
+.imageContainer {
+    display: flex;
+    width: 200%;
+    animation: scroll 5s linear infinite;
+}
+
+.imageWrapper {
+    flex-shrink: 0;
+    width: 50%;
+}

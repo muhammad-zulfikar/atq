@@ -3,7 +3,7 @@
 import ImageGallery from "@/components/image-gallery/ImageGallery";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import React, { ReactNode } from "react";
-import { imageGallery } from "./futsal/constant";
+import { imageGallery } from "./constant";
 import { Route } from "next";
 
 const DetailtLayout = ({ children }: { children: ReactNode }) => {

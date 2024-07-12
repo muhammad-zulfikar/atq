@@ -84,17 +84,17 @@ const SectionProfile: FC<SectionProfileProps> = ({ className = "pb-16" }) => {
             </p>
           </div>
 
-          <div className="space-y-4">
+          <div id="keunggulan" className="space-y-4">
             <span className="block text-xl font-semibold text-left">Keunggulan</span>
-            <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-neutral-500 dark:text-neutral-400">
+            <div className="mt-5 grid grid-cols-2 lg:grid-cols-4 gap-4 text-neutral-500 dark:text-neutral-400">
               {KEUNGGULAN.map((item) => (
                 <div
                   key={item.id}
                   className="flex items-center justify-center flex-col p-4 cursor-pointer bg-neutral-200 dark:bg-neutral-800 dark:bg-opacity-50 dark:hover:bg-neutral-800 hover:bg-neutral-300 rounded-lg"
                   onClick={() => setSelectedItem(item)}
                 >
-                  {renderIcon(item.icon, "w-5 h-5 lg:w-7 lg:h-7 text-neutral-900 dark:text-neutral-200")}
-                  <p className="mt-2 text-center lg:text-left">{item.desc}</p>
+                  {renderIcon(item.icon, "w-5 h-5 lg:w-7 lg:h-7")}
+                  <p className="mt-2 text-center text-sm md:text-base">{item.desc}</p>
                 </div>
               ))}
             </div>

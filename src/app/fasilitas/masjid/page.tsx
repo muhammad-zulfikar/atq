@@ -2,25 +2,45 @@
 
 import React, { FC } from "react";
 import Image from "next/image";
-import { PHOTOS } from "@/app/galeri/constant";
-import { ChevronRightIcon } from "@heroicons/react/24/outline";
+import { usePathname, useRouter } from "next/navigation";
+import { PHOTOS } from "./constant";
+import { Route } from "next";
 
-export interface SectionGalleryProps { }
+export interface FacilityPageProps { }
 
-const SectionGallery: FC<{ onOpenModal: () => void }> = ({ onOpenModal }) => {
+const FacilityPage: FC<FacilityPageProps> = ({ }) => {
+
+  const thisPathname = usePathname();
+  const router = useRouter();
+
   const handleOpenModalImageGallery = () => {
-    onOpenModal();
+    router.push(`${thisPathname}/?modal=PHOTO_TOUR_SCROLLABLE` as Route);
+  };
+
+  const renderSection = () => {
+    return (
+      <div className="listingSection__wrap">
+        {/* HEADING */}
+        <h2 className="text-2xl font-semibold">Masjid</h2>
+        <div className="border-b border-neutral-200 dark:border-neutral-700" />
+
+        {/* CONTENT */}
+        <div>
+          <span className="block text-neutral-500 dark:text-neutral-400">
+            Masjid sekolah kami adalah tempat yang tenang dan suci untuk beribadah.
+            Menyediakan ruang yang cukup untuk sholat berjamaah dan kegiatan keagamaan lainnya.
+            Tempat yang nyaman untuk mendekatkan diri kepada Allah SWT.
+          </span>
+        </div>
+
+      </div>
+    );
   };
 
   return (
-    <div className="nc-ListingStayDetailPage">
-      <h2 className="font-semibold text-3xl md:text-4xl text-left flex items-center">
-        Galeri
-        <a href="/galeri" className="ml-2 p-2 bg-neutral-200 dark:bg-neutral-800 dark:bg-opacity-50 rounded-lg hover:bg-neutral-300 dark:hover:bg-neutral-800">
-          <ChevronRightIcon className="h-4 w-4 text-neutral-500 dark:text-neutral-400" />
-        </a>
-      </h2>
-      <header className="rounded-md sm:rounded-xl mt-10">
+    <div className="container relative pt-6 pb-16">
+      {/*  HEADER */}
+      <header className="rounded-md sm:rounded-xl">
         <div className="relative grid grid-cols-3 sm:grid-cols-4 gap-1 sm:gap-2">
           <div
             className="col-span-2 row-span-3 sm:row-span-2 relative rounded-md sm:rounded-xl overflow-hidden cursor-pointer"
@@ -38,7 +58,8 @@ const SectionGallery: FC<{ onOpenModal: () => void }> = ({ onOpenModal }) => {
           {PHOTOS.filter((_, i) => i >= 1 && i < 5).map((item, index) => (
             <div
               key={index}
-              className={`relative rounded-md sm:rounded-xl overflow-hidden ${index >= 3 ? "hidden sm:block" : ""}`}
+              className={`relative rounded-md sm:rounded-xl overflow-hidden ${index >= 3 ? "hidden sm:block" : ""
+                }`}
             >
               <div className="aspect-w-4 aspect-h-3 sm:aspect-w-6 sm:aspect-h-5">
                 <Image
@@ -49,6 +70,8 @@ const SectionGallery: FC<{ onOpenModal: () => void }> = ({ onOpenModal }) => {
                   sizes="400px"
                 />
               </div>
+
+              {/* OVERLAY */}
               <div
                 className="absolute inset-0 bg-neutral-900 bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity cursor-pointer"
                 onClick={handleOpenModalImageGallery}
@@ -57,9 +80,16 @@ const SectionGallery: FC<{ onOpenModal: () => void }> = ({ onOpenModal }) => {
           ))}
         </div>
       </header>
+
+      {/* MAIN */}
+      <main className=" relative z-10 mt-11 flex flex-col lg:flex-row ">
+        {/* CONTENT */}
+        <div className="w-full space-y-8 lg:space-y-10">
+          {renderSection()}
+        </div>
+      </main>
     </div>
   );
 };
 
-export default SectionGallery;
-
+export default FacilityPage;

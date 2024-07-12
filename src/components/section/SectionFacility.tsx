@@ -2,10 +2,7 @@
 
 import React, { FC, useEffect, useState } from "react";
 import { TaxonomyType } from "@/data/types";
-import CardCategory3 from "@/components/CardCategory3";
-import CardCategory4 from "@/components/CardCategory4";
 import CardCategory5 from "@/components/CardCategory5";
-import Heading from "@/shared/Heading";
 import { AnimatePresence, motion, MotionConfig } from "framer-motion";
 import { useSwipeable } from "react-swipeable";
 import PrevBtn from "../PrevBtn";
@@ -20,7 +17,6 @@ export interface SectionFacilityProps {
   heading?: string;
   subHeading?: string;
   categories?: TaxonomyType[];
-  categoryCardType?: "card3" | "card4" | "card5";
   itemPerRow?: 4 | 5;
   sliderStyle?: "style1" | "style2";
 }
@@ -28,79 +24,76 @@ export interface SectionFacilityProps {
 const DEMO_CATS: TaxonomyType[] = [
   {
     id: "1",
-    href: "/fasilitas",
-    name: "Nature House",
+    href: "/fasilitas/kelas",
+    name: "Ruang Kelas",
     taxonomy: "category",
     thumbnail:
-      "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      "https://images.pexels.com/photos/256395/pexels-photo-256395.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "2",
-    href: "/fasilitas",
-    name: "Wooden house",
+    href: "/fasilitas/lapangan",
+    name: "Lapangan",
     taxonomy: "category",
     thumbnail:
-      "https://images.pexels.com/photos/2351649/pexels-photo-2351649.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/5896843/pexels-photo-5896843.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
   },
   {
     id: "3",
-    href: "/fasilitas",
-    name: "Houseboat",
+    href: "/fasilitas/masjid",
+    name: "Masjid",
     taxonomy: "category",
     thumbnail:
-      "https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/326716/pexels-photo-326716.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "4",
-    href: "/fasilitas",
-    name: "Farm House",
+    href: "/fasilitas/kantin",
+    name: "Kantin",
     taxonomy: "category",
     thumbnail:
-      "https://images.pexels.com/photos/248837/pexels-photo-248837.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/5506019/pexels-photo-5506019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "5",
-    href: "/fasilitas",
-    name: "Dome House",
+    href: "/fasilitas/uks",
+    name: "UKS",
     taxonomy: "category",
     thumbnail:
-      "https://images.pexels.com/photos/3613236/pexels-photo-3613236.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "6",
-    href: "/fasilitas",
-    name: "Dome House",
+    href: "/fasilitas/lab-komputer",
+    name: "Lab Komputer",
     taxonomy: "category",
     thumbnail:
-      "https://images.pexels.com/photos/14534337/pexels-photo-14534337.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+      "https://images.pexels.com/photos/3747486/pexels-photo-3747486.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
   },
   {
     id: "7",
-    href: "/fasilitas",
-    name: "Wooden house",
+    href: "/fasilitas/perpustakaan",
+    name: "Perpustakaan",
     taxonomy: "category",
     thumbnail:
-      "https://images.pexels.com/photos/2351649/pexels-photo-2351649.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
   },
   {
     id: "8",
-    href: "/fasilitas",
-    name: "Wooden Dome",
+    href: "/fasilitas/lab-sains",
+    name: "Lab Sains",
     taxonomy: "category",
     thumbnail:
-      "https://images.pexels.com/photos/9039238/pexels-photo-9039238.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+      "https://images.pexels.com/photos/12904930/pexels-photo-12904930.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
   },
 ];
 
 const SectionFacility: FC<SectionFacilityProps> = ({
   heading = "Fasilitas Sekolah",
-  subHeading = "Fasilitas SDIT At-Taufiq",
   className = "",
   itemClassName = "",
   categories = DEMO_CATS,
   itemPerRow = 5,
-  categoryCardType = "card3",
-  sliderStyle = "style1",
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
@@ -147,25 +140,12 @@ const SectionFacility: FC<SectionFacilityProps> = ({
     trackMouse: true,
   });
 
-  const renderCard = (item: TaxonomyType) => {
-    switch (categoryCardType) {
-      case "card3":
-        return <CardCategory3 taxonomy={item} />;
-      case "card4":
-        return <CardCategory4 taxonomy={item} />;
-      case "card5":
-        return <CardCategory5 taxonomy={item} />;
-      default:
-        return <CardCategory3 taxonomy={item} />;
-    }
-  };
-
   if (!numberOfItems) return null;
 
   return (
     <div className={`nc-SectionSliderNewCategories ${className}`}>
       <h2 className="font-semibold text-3xl md:text-4xl text-left flex items-center mb-10 space-y-10">
-        Fasilitas Sekolah
+        {heading}
         <a href="/fasilitas" className="ml-2 p-2 bg-neutral-200 dark:bg-neutral-800 dark:bg-neutral-800 dark:bg-opacity-50 rounded-lg hover:bg-neutral-300 dark:hover:bg-neutral-800">
           <ChevronRightIcon className="h-4 w-4 text-neutral-500 dark:text-neutral-400" />
         </a>
@@ -199,7 +179,7 @@ const SectionFacility: FC<SectionFacilityProps> = ({
                       width: `calc(1/${numberOfItems} * 100%)`,
                     }}
                   >
-                    {renderCard(item)}
+                    <CardCategory5 taxonomy={item} />
                   </motion.li>
                 ))}
               </AnimatePresence>

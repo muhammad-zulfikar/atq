@@ -1,9 +1,8 @@
 import React, { FC } from "react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Image from "next/image";
 import ButtonPrimary from "@/shared/ButtonPrimary";
 import ButtonSecondary from "@/shared/ButtonSecondary";
+import styles from "@/styles/SectionHero.module.css";
 
 export interface SectionHeroProps {
   className?: string;
@@ -11,8 +10,10 @@ export interface SectionHeroProps {
 
 const images = [
   { src: "/images/hero-right.png", alt: "Hero 1" },
-  { src: "/images/hero-right-2.png", alt: "Hero 2" },
-  { src: "/images/hero-right-3.png", alt: "Hero 3" },
+  { src: "/images/hero-right.png", alt: "Hero 2" },
+  { src: "/images/hero-right.png", alt: "Hero 3" },
+  { src: "/images/hero-right.png", alt: "Hero 4" },
+  { src: "/images/hero-right.png", alt: "Hero 5" },
 ];
 
 const SectionHero: FC<SectionHeroProps> = ({ className = "" }) => {
@@ -35,22 +36,16 @@ const SectionHero: FC<SectionHeroProps> = ({ className = "" }) => {
             </ButtonSecondary>
           </div>
         </div>
-        <div className="flex-grow mt-10 lg:mt-0 p-0">
-          <Carousel
-            autoPlay={true}
-            infiniteLoop={true}
-            showThumbs={false}
-            showStatus={false}
-            showArrows={false}
-            interval={3000}
-            className="rounded-xl overflow-hidden"
-          >
-            {images.map((image, index) => (
-              <div key={index}>
+        <div className={`flex-grow mt-10 lg:mt-0 p-0 relative overflow-hidden ${styles.card}`}>
+          <div className={styles.imageContainer}>
+            {[...images, ...images].map((image, index) => (
+              <div key={index} className={styles.imageWrapper}>
                 <Image className="w-full xl:h-[400px]" src={image.src} alt={image.alt} priority width={900} height={700} />
               </div>
             ))}
-          </Carousel>
+          </div>
+        </div>
+        <div>
           <div className="flex gap-5 md:hidden pt-10">
             <ButtonPrimary href="/ppdb" sizeClass="px-5 py-4 sm:px-7">
               Daftar Sekarang!

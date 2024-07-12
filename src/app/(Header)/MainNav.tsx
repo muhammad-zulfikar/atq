@@ -25,7 +25,7 @@ const MainNav: FC<MainNavProps> = ({ className = "" }) => {
             <NotifyDropdown />
             <SwitchDarkMode />
             <Link
-              href={"/contact" as Route<string>}
+              href={"/kontak" as Route<string>}
               className="self-center text-opacity-90 group px-4 py-2 rounded-full inline-flex items-center text-sm text-white font-medium bg-green-700 hover:bg-green-900"
             >
               Kontak

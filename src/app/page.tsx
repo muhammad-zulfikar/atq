@@ -49,7 +49,7 @@ function PageHome() {
           <SectionProfile />
         </div>
 
-        <SectionFacility categoryCardType="card5" />
+        <SectionFacility />
 
         <SectionExtracurricular />
 

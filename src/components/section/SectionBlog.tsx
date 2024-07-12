@@ -2,7 +2,6 @@ import React from "react";
 import ButtonPrimary from "@/shared/ButtonPrimary";
 import { POSTS } from "@/data/posts";
 import SectionMagazine from "../../app/blog/components/SectionMagazine";
-import BgGlassmorphism from "@/components/BgGlassmorphism";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
 const MAGAZINE_POSTS = POSTS.filter((_, i) => i >= 0 && i < 8);
@@ -10,7 +9,6 @@ const MAGAZINE_POSTS = POSTS.filter((_, i) => i >= 0 && i < 8);
 const SectionBlog: React.FC = () => {
   return (
     <div className="nc-BlogPage overflow-hidden relative">
-      <BgGlassmorphism />
       <h2 className="font-semibold text-3xl md:text-4xl text-left flex items-center">
         Berita & Artikel
         <a href="/blog" className="ml-2 p-2 bg-neutral-200 dark:bg-neutral-800 dark:bg-opacity-50 rounded-lg hover:bg-neutral-300 dark:hover:bg-neutral-800">

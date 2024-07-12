@@ -104,15 +104,6 @@
       @apply rounded-l-none;
     }
   }
-
-  .DateRangePickerInput_clearDates,
-  .SingleDatePickerInput_clearDate {
-    @apply rounded-full bg-neutral-200/90 dark:bg-white/10;
-
-    svg {
-      @apply w-2 fill-neutral-700 dark:fill-neutral-300;
-    }
-  }
 }
 
 .nc-ListingStayDetailPage__guestsInput {
@@ -278,10 +269,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     font-size: 10px;
     margin-left: 6px;
   }
-}
-
-.FooterNav--hide {
-  @apply translate-y-full;
 }
 
 @keyframes myblur {

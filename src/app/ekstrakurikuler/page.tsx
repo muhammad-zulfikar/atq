@@ -3,7 +3,7 @@
 import React, { FC } from "react";
 import { TaxonomyType } from "@/data/types";
 
-export interface PageFacilityProps {
+export interface PageExtracurricularProps {
   className?: string;
   heading?: string;
   subHeading?: string;
@@ -13,72 +13,72 @@ export interface PageFacilityProps {
 const DEMO_CATS: TaxonomyType[] = [
   {
     id: "1",
-    href: "/fasilitas/kelas",
-    name: "Ruang Kelas",
-    taxonomy: "category",
-    thumbnail:
-      "https://images.pexels.com/photos/256395/pexels-photo-256395.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-  },
-  {
-    id: "2",
     href: "/fasilitas/lapangan",
     name: "Lapangan",
     taxonomy: "category",
     thumbnail:
-      "https://images.pexels.com/photos/5896843/pexels-photo-5896843.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
   },
   {
-    id: "3",
-    href: "/fasilitas/masjid",
+    id: "2",
+    href: "/fasilitas",
     name: "Masjid",
     taxonomy: "category",
     thumbnail:
-      "https://images.pexels.com/photos/326716/pexels-photo-326716.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/2351649/pexels-photo-2351649.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
-    id: "4",
-    href: "/fasilitas/kantin",
+    id: "3",
+    href: "/fasilitas",
     name: "Kantin",
     taxonomy: "category",
     thumbnail:
-      "https://images.pexels.com/photos/5506019/pexels-photo-5506019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+  },
+  {
+    id: "4",
+    href: "/fasilitas",
+    name: "UKS",
+    taxonomy: "category",
+    thumbnail:
+      "https://images.pexels.com/photos/248837/pexels-photo-248837.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "5",
-    href: "/fasilitas/uks",
-    name: "Unit Kesehatan Sekolah (UKS)",
-    taxonomy: "category",
-    thumbnail:
-      "https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-  },
-  {
-    id: "6",
-    href: "/fasilitas/lab-komputer",
+    href: "/fasilitas",
     name: "Lab Komputer",
     taxonomy: "category",
     thumbnail:
-      "https://images.pexels.com/photos/3747486/pexels-photo-3747486.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/3613236/pexels-photo-3613236.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+  },
+  {
+    id: "6",
+    href: "/fasilitas",
+    name: "Dome House",
+    taxonomy: "category",
+    thumbnail:
+      "https://images.pexels.com/photos/14534337/pexels-photo-14534337.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
   },
   {
     id: "7",
-    href: "/fasilitas/perpustakaan",
-    name: "Perpustakaan",
+    href: "/fasilitas",
+    name: "Wooden house",
     taxonomy: "category",
     thumbnail:
-      "https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+      "https://images.pexels.com/photos/2351649/pexels-photo-2351649.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "8",
-    href: "/fasilitas/lab-sains",
-    name: "Lab Sains",
+    href: "/fasilitas",
+    name: "Wooden Dome",
     taxonomy: "category",
     thumbnail:
-      "https://images.pexels.com/photos/12904930/pexels-photo-12904930.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+      "https://images.pexels.com/photos/9039238/pexels-photo-9039238.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
   },
 ];
 
-const PageFacility: FC<PageFacilityProps> = ({
-  heading = "Fasilitas",
+const PageExtracurricular: FC<PageExtracurricularProps> = ({
+  heading = "Ekstrakurikuler",
   className = "container relative pt-6 pb-16",
   categories = DEMO_CATS,
 }) => {
@@ -106,4 +106,4 @@ const PageFacility: FC<PageFacilityProps> = ({
   );
 };
 
-export default PageFacility;
+export default PageExtracurricular;

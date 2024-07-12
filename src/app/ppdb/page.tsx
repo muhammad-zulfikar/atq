@@ -6,7 +6,7 @@ import Badge from "@/shared/Badge";
 import SocialsList from "@/shared/SocialsList";
 import Image from "next/image";
 import travelhero2Image from "@/images/travelhero2.png";
-import PageContact from "../contact/page";
+import PageContact from "../kontak/page";
 import Link from "next/link";
 import { Route } from "@/routers/types";
 

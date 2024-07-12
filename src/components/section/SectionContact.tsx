@@ -20,6 +20,10 @@ const info = [
     title: "Telepon",
     desc: "021-8733-222",
   },
+  {
+    title: "WhatsApp",
+    desc: "081234567890",
+  },
 ];
 
 const SectionContact: FC<SectionContactProps> = ({ }) => {
