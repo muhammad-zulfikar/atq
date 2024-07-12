@@ -10,7 +10,7 @@ import SectionHero from "@/components/section/SectionHero";
 import SectionProfile from "@/components/section/SectionProfile";
 import SectionFacility from "@/components/section/SectionFacility";
 import SectionExtracurricular from "@/components/section/SectionExtracurricular";
-import SectionBlog from "../components/section/SectionBlog";
+import SectionBlog from "@/components/section/SectionBlog";
 
 import SectionGallery from "../components/section/SectionGallery";
 import ImageGallery from "@/components/image-gallery/ImageGallery";

@@ -128,17 +128,17 @@ export const NAVIGATION_DESKTOP: NavItemType[] = [
       },
       {
         id: ncNanoId(),
-        href: "/kontak",
+        href: "/kontak" as Route,
         name: "Kontak"
       },
       {
         id: ncNanoId(),
-        href: "/kontak",
+        href: "/kontak" as Route,
         name: "FAQ"
       },
       {
         id: ncNanoId(),
-        href: "/kontak",
+        href: "/kontak" as Route,
         name: "Pengumuman"
       },
     ],
