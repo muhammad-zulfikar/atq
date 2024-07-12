@@ -8,7 +8,7 @@ const SectionAddress: FC = () => {
       <h2 className="font-medium text-3xl md:text-4xl text-left mb-10">
         Lokasi
       </h2>
-      <div className="w-full h-96 md:h-[500px]">
+      <div className="w-full h-[300px] md:h-[500px]">
         <iframe
           src={mapSrc}
           width="100%"

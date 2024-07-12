@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import { TaxonomyType } from "@/data/types";
-import convertNumbThousand from "@/utils/convertNumbThousand";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -13,7 +12,7 @@ const CardCategory5: FC<CardCategory5Props> = ({
   className = "",
   taxonomy,
 }) => {
-  const { count, name, href = "/", thumbnail } = taxonomy;
+  const { name, href = "/", thumbnail } = taxonomy;
   return (
     <Link
       href={href}

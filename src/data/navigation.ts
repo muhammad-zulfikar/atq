@@ -133,7 +133,7 @@ export const NAVIGATION_DESKTOP: NavItemType[] = [
       },
       {
         id: ncNanoId(),
-        href: "/kontak" as Route,
+        href: "/faq" as Route,
         name: "FAQ"
       },
       {

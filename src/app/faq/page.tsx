@@ -1,9 +1,9 @@
-import SectionContact from "@/components/section/SectionContact";
+import PageFAQ from "@/components/page/PageFAQ";
 
 const Page = () => {
   return (
     <div className="container relative pt-6 pb-16">
-      <SectionContact />
+      <PageFAQ />
     </div>
   );
 };

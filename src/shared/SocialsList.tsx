@@ -11,7 +11,6 @@ const socialsDemo: SocialType[] = [
   { name: "Facebook", icon: "lab la-facebook-square", href: "https://facebook.com/AttaufiqDepok" },
   { name: "Youtube", icon: "lab la-youtube", href: "https://www.youtube.com/channel/UCvjmCx5Xh23_sIe9hU6jalg" },
   { name: "Instagram", icon: "lab la-instagram", href: "https://www.instagram.com/sdit_attaufiqdepok" },
-  { name: "Twitter", icon: "lab la-twitter", href: "#" },
 ];
 
 const SocialsList: FC<SocialsListProps> = ({

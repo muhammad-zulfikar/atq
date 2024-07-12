@@ -89,7 +89,7 @@ export default function SharedModal({
                   width={navigation ? 1280 : 1920}
                   height={navigation ? 853 : 1280}
                   priority
-                  alt="Chisfis listing gallery"
+                  alt="Gallery"
                   onLoadingComplete={() => setLoaded(true)}
                   sizes="(max-width: 1025px) 100vw, 1280px"
                 />
@@ -202,7 +202,7 @@ export default function SharedModal({
                       } relative inline-block w-full shrink-0 transform-gpu overflow-hidden focus:outline-none`}
                     >
                       <Image
-                        alt="small photos on the bottom"
+                        alt="Preview"
                         width={180}
                         height={120}
                         className={`${

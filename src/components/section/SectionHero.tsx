@@ -8,15 +8,17 @@ export interface SectionHeroProps {
   className?: string;
 }
 
-const images = [
-  { src: "/images/hero-right.png", alt: "Hero 1" },
-  { src: "/images/hero-right.png", alt: "Hero 2" },
-  { src: "/images/hero-right.png", alt: "Hero 3" },
-  { src: "/images/hero-right.png", alt: "Hero 4" },
-  { src: "/images/hero-right.png", alt: "Hero 5" },
-];
+import heroRight1 from "src/images/hero-right.png";
+import heroRight2 from "src/images/hero-right-2.png";
+import heroRight3 from "src/images/hero-right-3.png";
 
 const SectionHero: FC<SectionHeroProps> = ({ className = "" }) => {
+  const images = [
+    heroRight1,
+    heroRight2,
+    heroRight3,
+  ];
+
   return (
     <div className={`nc-SectionHero flex flex-col-reverse lg:flex-col relative ${className}`}>
       <div className="flex flex-col lg:flex-row lg:items-center mt-5 lg:mt-0">
@@ -38,9 +40,9 @@ const SectionHero: FC<SectionHeroProps> = ({ className = "" }) => {
         </div>
         <div className={`flex-grow mt-10 lg:mt-0 p-0 relative overflow-hidden ${styles.card}`}>
           <div className={styles.imageContainer}>
-            {[...images, ...images].map((image, index) => (
+            {images.map((image, index) => (
               <div key={index} className={styles.imageWrapper}>
-                <Image className="w-full xl:h-[400px]" src={image.src} alt={image.alt} priority width={900} height={700} />
+                <Image className="w-full xl:h-[400px]" src={image} alt={`Hero Image ${index + 1}`} priority width={900} height={700} />
               </div>
             ))}
           </div>

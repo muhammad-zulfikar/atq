@@ -2,6 +2,7 @@
 
 import React, { FC } from "react";
 import { TaxonomyType } from "@/data/types";
+import { ChevronLeftIcon } from "@heroicons/react/24/outline";
 
 export interface PageFacilityProps {
   className?: string;
@@ -86,6 +87,9 @@ const PageFacility: FC<PageFacilityProps> = ({
   return (
     <div className={`nc-SectionSliderNewCategories ${className}`}>
       <h2 className="font-semibold text-3xl md:text-4xl text-left flex items-center mb-10 space-y-10">
+        <a href="/" className="mr-4 p-2 bg-neutral-200 dark:bg-neutral-800 dark:bg-neutral-800 dark:bg-opacity-50 rounded-lg hover:bg-neutral-300 dark:hover:bg-neutral-800">
+          <ChevronLeftIcon className="h-4 w-4 text-neutral-500 dark:text-neutral-400" />
+        </a>
         {heading}
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-12">
@@ -95,11 +99,17 @@ const PageFacility: FC<PageFacilityProps> = ({
               <img
                 src={item.thumbnail}
                 alt={item.name}
-                className="object-cover w-full h-full group-hover:opacity-75 transition-opacity duration-300"
+                className="object-cover w-full h-full"
               />
-              <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-25 transition-opacity duration-300"></div>
+              <span className="opacity-0 group-hover:opacity-100 absolute inset-0 bg-black bg-opacity-10 transition-opacity"></span>
             </div>
-            <h3 className="text-sm md:text-[16px] font-medium mt-4 text-center">{item.name}</h3>
+            <div className="mt-4 px-3 truncate">
+              <h2
+                className={`text-base sm:text-lg text-neutral-900 dark:text-neutral-100 font-medium truncate`}
+              >
+                {item.name}
+              </h2>
+            </div>
           </a>
         ))}
       </div>

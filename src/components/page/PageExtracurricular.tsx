@@ -2,6 +2,7 @@
 
 import React, { FC } from "react";
 import { TaxonomyType } from "@/data/types";
+import { ChevronLeftIcon } from "@heroicons/react/24/outline";
 
 export interface PageExtracurricularProps {
   className?: string;
@@ -13,67 +14,67 @@ export interface PageExtracurricularProps {
 const DEMO_CATS: TaxonomyType[] = [
   {
     id: "1",
-    href: "/fasilitas/lapangan",
-    name: "Lapangan",
+    href: "/ekstrakurikuler/futsal",
+    name: "Futsal",
     taxonomy: "category",
     thumbnail:
-      "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      "https://images.pexels.com/photos/15964698/pexels-photo-15964698/free-photo-of-men-playing-futsal.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "2",
-    href: "/fasilitas",
-    name: "Masjid",
+    href: "/ekstrakurikuler",
+    name: "Karate",
     taxonomy: "category",
     thumbnail:
-      "https://images.pexels.com/photos/2351649/pexels-photo-2351649.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/7045580/pexels-photo-7045580.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
   },
   {
     id: "3",
-    href: "/fasilitas",
-    name: "Kantin",
+    href: "/ekstrakurikuler",
+    name: "Taekwondo",
     taxonomy: "category",
     thumbnail:
-      "https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/4428290/pexels-photo-4428290.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "4",
-    href: "/fasilitas",
-    name: "UKS",
+    href: "/ekstrakurikuler",
+    name: "Basket",
     taxonomy: "category",
     thumbnail:
-      "https://images.pexels.com/photos/248837/pexels-photo-248837.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/5586418/pexels-photo-5586418.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "5",
-    href: "/fasilitas",
-    name: "Lab Komputer",
+    href: "/ekstrakurikuler",
+    name: "Marawis",
     taxonomy: "category",
     thumbnail:
-      "https://images.pexels.com/photos/3613236/pexels-photo-3613236.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/6193720/pexels-photo-6193720.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "6",
-    href: "/fasilitas",
-    name: "Dome House",
+    href: "/ekstrakurikuler",
+    name: "Pramuka",
     taxonomy: "category",
     thumbnail:
-      "https://images.pexels.com/photos/14534337/pexels-photo-14534337.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+      "https://images.pexels.com/photos/10643526/pexels-photo-10643526.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "7",
-    href: "/fasilitas",
-    name: "Wooden house",
+    href: "/ekstrakurikuler",
+    name: "Paskibra",
     taxonomy: "category",
     thumbnail:
-      "https://images.pexels.com/photos/2351649/pexels-photo-2351649.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/9223650/pexels-photo-9223650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: "8",
-    href: "/fasilitas",
-    name: "Wooden Dome",
+    href: "/ekstrakurikuler",
+    name: "Paduan Suara",
     taxonomy: "category",
     thumbnail:
-      "https://images.pexels.com/photos/9039238/pexels-photo-9039238.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+      "https://images.pexels.com/photos/6193853/pexels-photo-6193853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
 ];
 
@@ -86,6 +87,9 @@ const PageExtracurricular: FC<PageExtracurricularProps> = ({
   return (
     <div className={`nc-SectionSliderNewCategories ${className}`}>
       <h2 className="font-semibold text-3xl md:text-4xl text-left flex items-center mb-10 space-y-10">
+        <a href="/" className="mr-4 p-2 bg-neutral-200 dark:bg-neutral-800 dark:bg-neutral-800 dark:bg-opacity-50 rounded-lg hover:bg-neutral-300 dark:hover:bg-neutral-800">
+          <ChevronLeftIcon className="h-4 w-4 text-neutral-500 dark:text-neutral-400" />
+        </a>
         {heading}
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-12">
@@ -95,11 +99,17 @@ const PageExtracurricular: FC<PageExtracurricularProps> = ({
               <img
                 src={item.thumbnail}
                 alt={item.name}
-                className="object-cover w-full h-full group-hover:opacity-75 transition-opacity duration-300"
+                className="object-cover w-full h-full"
               />
-              <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-25 transition-opacity duration-300"></div>
+              <span className="opacity-0 group-hover:opacity-100 absolute inset-0 bg-black bg-opacity-20 dark:bg-opacity-10 transition-opacity"></span>
             </div>
-            <h3 className="text-sm md:text-[16px] font-medium mt-4 text-center">{item.name}</h3>
+            <div className="mt-4 px-3 truncate">
+              <h2
+                className={`text-base sm:text-lg text-neutral-900 dark:text-neutral-100 font-medium truncate`}
+              >
+                {item.name}
+              </h2>
+            </div>
           </a>
         ))}
       </div>
